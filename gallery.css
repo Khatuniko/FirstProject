@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+}
+
+body.dark {
+background-color: #000;
+color: #fff;
+}
+
+
+main { 
+    display: block;
+    color: #06c;
+    margin: 10px;
+    text-transform:capitalize;
+    font-size: 25px;
+}
+
+
+main h1 {
+  font-size: 25px;
+  font-family: cursive;
+}
+
+
+main h2 {
+  font-size: 13px;
+  font-family: cursive;
+}
+
+
+main h1:hover {
+  color: grey;
+}
+
+main h2:hover {
+  color: grey;
+}
+
+main p:hover {
+    color: #06c;
+    transform: scale(1.5);
+    
+  }
+
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width: 100%;
+    margin: 30px auto;
+
+
+  }
+  
+  .gallery_item {
+    flex: 30%;
+    margin: 7px;
+    padding: 5px;
+    max-width: 30%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+
+
+  .gallery_item img {
+    width: 100%;
+    height: 100%;
+    transition: transform .7s;
+  }
+
+  @media screen and (max-width: 900px) {
+    .gallery_item{
+      flex: 45%;
+      max-width: 45%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .gallery_item{
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+  .gallery_item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    display: none;
+  }
+  
+  .gallery_item:hover p {
+    display: initial;
+  }
+  
+  .gallery_item:hover img {
+    transform: scale(1.2);
+  }
+

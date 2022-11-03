@@ -1,0 +1,122 @@
+ :root {
+  --brand-color: #0066cc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.show-mobile {
+  display: none;
+
+}
+
+@media screen and (max-width:600px) {
+  .show-mobile {
+    display: initial;
+  }
+
+  .show-desktop {
+    display: none;
+  } 
+}
+
+
+body {
+    margin: 0;
+    font-size: 14px;
+    background-color: #fff;
+    color: #000;
+  }
+
+body.dark {
+  background-color: #000;
+  color: #fff;
+}
+body.dark .main_header {
+  background-color: var(--brand-color);
+  color: white;
+}
+body.dark footer {
+  background-color:  var(--brand-color);
+}
+
+  header.main_header {
+    background-color: var(--brand-color);
+    height: 60px;
+    padding: 20px;
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+  }
+
+  #logo {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  header.main_header a{
+    text-decoration:none;
+    color: #000;
+    display: inline-block;
+    padding: 10px 25px;
+    margin-left: 20px;
+  }
+
+  header.main_header .btn_burger_menu {
+    background:none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    
+  }
+
+  .responsive_navigation {
+    position: relative;
+  }
+  .responsive_navigation:hover nav {
+    display: block;
+  }
+  
+  @media screen and (max-width:600px) {
+    header.main_header nav {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: var(--brand-color);
+    }
+    header.main_header nav a{
+      width: 100%;
+    }
+    header.main_header nav a:hover {
+      color: white;
+    }
+  }
+
+
+   footer {
+    text-align: center;
+    padding: 3px;
+    background-color: var(--brand-color);
+    color: white;
+    padding-top: 10px;
+  }
+
+  footer p {
+    color: black;
+    font-family: 'Lobster', cursive;
+
+  }
+  footer a {
+    color: black;
+     font-family: 'Lobster', cursive;
+    
+  }
+
+
+  
+ 
